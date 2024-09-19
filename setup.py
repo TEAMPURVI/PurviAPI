@@ -1,7 +1,7 @@
 from setuptools import setup,find_packages
 import re
 def version():
-    filename = "BadAPI/__init__.py"
+    filename = "PurviAPI/__init__.py"
     with open(filename) as f:
         match = re.search(r"""^__version__ = ['"]([^'"]*)['"]""", f.read(), re.M)
     if not match:
@@ -15,19 +15,19 @@ with open("README.md", encoding="utf8") as readme:
 
 # Setting up
 setup(
-    name="BadAPI",
+    name="PurviAPI",
     version=version(),
-    author="Bad | Bad",
-    author_email="sukhwinderwarval50@gmail.com",
-    description="python api hub | BadAPI",
+    author="RAUSHAN| Bad",
+    author_email="raushankumarpal03@gmail.com",
+    description="python api hub | PurviAPI",
     long_description_content_type="text/markdown",
     long_description=long_desc,
     packages=find_packages(),
     license="MIT",
-    url="https://github.com/badmunda98/BadAPI",
-    download_url="https://github.com/badmunda98/BadAPI/blob/main/README.md",
+    url="https://github.com/TEAMPURVI/PurviAPI",
+    download_url="https://github.com/TEAMPURVI/PurviAPI/blob/main/README.md",
     install_requires=["pytz>=2023.3","requests-html","pillow","lxml_html_clean"],
-    keywords=['python', "BadAPI","flask"],
+    keywords=['python', "PurviAPI","flask"],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
@@ -53,9 +53,9 @@ setup(
     ],
     
     project_urls={
-        "Tracker": "https://github.com/badmunda98/BadAPI/issues",
-        "Community": "https://t.me/mr_sukkun",
-        "Source": "https://github.com/badmunda98/BadAPI",
+        "Tracker": "https://github.com/PurviAPI/PurviAPI/issues",
+        "Community": "https://t.me/purvi_support",
+        "Source": "https://github.com/TEAMPURVI/PurviAPI",
     },
     python_requires="~=3.7",
 )
