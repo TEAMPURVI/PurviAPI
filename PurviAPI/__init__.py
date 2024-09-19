@@ -7,11 +7,11 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import urllib
 from requests_html import HTMLSession
-from BadAPI.func import (MORSE_CODE_DICT,payloads_response,gpt_4_mode,payload8)
+from PurviAPI.func import (MORSE_CODE_DICT,payloads_response,gpt_4_mode,payload8)
 from base64 import b64decode as m,b64encode as n
-from BadAPI.words import wordshub
+from PurviAPI.words import wordshub
 from PIL import Image, ImageDraw, ImageFont
-from BadAPI.truth_dare import TRUTH,DARE
+from PurviAPI.truth_dare import TRUTH,DARE
 __version__ = "0.6.5.6"
 
 __all__ = ["api"]
@@ -21,8 +21,8 @@ class BadAPI:
     
     def __init__(self)->None:
         """Api for various purpose
-    support group : https://t.me/the_support_chat
-    owner : @mr_sukkun
+    support group : https://t.me/purvi_support
+    owner : @ll_ALPHA_BABY_lll
         """
         pass
     
@@ -38,7 +38,7 @@ class BadAPI:
             str: The response text from the datagpt API.
 
         Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> response = api.datagpt("What are the latest trends in AI?")
         >>> print(response)
         """
@@ -57,7 +57,7 @@ class BadAPI:
             json_text = extracted_json.replace('\n', ' ')
 
             data = json.loads(json_text)
-            return {"results":data["text"],"join": "@Mr_Sukkun", "success": True
+            return {"results":data["text"],"join": "@WORLD_ALPHA", "success": True
                     }
         except Exception as e:
             return e   
@@ -101,7 +101,7 @@ class BadAPI:
             requests.Response: The response object from the API request.
 
         Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> response = api.blackbox("Hello, how are you?")
         >>> print(response.text)
         {
@@ -140,7 +140,7 @@ class BadAPI:
         try:
             response = requests.post(url, json=payload, headers=headers)
             if response.status_code == 200:
-                return {"results": response.text, "join": "@Mr_Sukkun", "success": True}
+                return {"results": response.text, "join": "@WORLD_ALPHA", "success": True}
         except Exception as e:
             return e  
     
@@ -160,7 +160,7 @@ class BadAPI:
             str: The response text from the chatgpt API.
 
         Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> response = api.chatgpt("hi babe?",mode="girlfriend")
         >>> print(response)
         """
@@ -174,11 +174,11 @@ class BadAPI:
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
         }
             response = session.post(url, headers=headers, data=json.dumps(response_data))
-            return {"results":response.json()["response"],"join": "@Mr_Sukkun", "success": True}
+            return {"results":response.json()["response"],"join": "@WORLD_ALPHA", "success": True}
         else:
             try:
                 result = gpt_4_mode(args, mode)
-                return {"results":result,"join": "@Mr_Sukkun", "success": True}
+                return {"results":result,"join": "@WORLD_ALPHA", "success": True}
                 
             except Exception as e:
                 return e  
@@ -195,7 +195,7 @@ class BadAPI:
         - str: A randomly generated password consisting of characters from string.ascii_letters, string.punctuation, and string.digits.
 
         Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> api.password()
         'r$6Ag~P{32F+'
         >>> api.password(10)
@@ -214,13 +214,13 @@ class BadAPI:
             : A random word from json file.
 
         Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> word = api.randomword()
         >>> print(word)
         """
         
         word = random.choice(wordshub)
-        return {"results": word, "join": "@Mr_Sukkun", "sucess": True}
+        return {"results": word, "join": "@WORLD_ALPHA", "sucess": True}
     
     @staticmethod
     def gemini(args: str) -> dict:
@@ -234,7 +234,7 @@ class BadAPI:
             dict: A dictionary containing the generated content with metadata.
 
         Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> generated_content = api.gemini("Hello, how are you?")
         >>> print(generated_content)
         """
@@ -250,7 +250,7 @@ class BadAPI:
             response = requests.post(url, headers=headers, data=json.dumps(payload))
             if response.status_code == 200:
                 generated_text = response.json()["candidates"][0]["content"]["parts"][0]["text"]
-                return {"results":generated_text,"join": "@Mr_Sukkun", "success": True}
+                return {"results":generated_text,"join": "@WORLD_ALPHA", "success": True}
         except Exception as e:
             return e
     
@@ -266,7 +266,7 @@ class BadAPI:
         str: A string of hashtags related to the given keyword.
         
         Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> keyword = "python"
         >>> hashtags = api.hashtag(keyword)
         >>> print(hashtags)
@@ -290,7 +290,7 @@ class BadAPI:
         str: The response from the chatbot based on the input text.
 
         Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> user_input = "Hello, how are you?"
         >>> response = api.chatbot(user_input)
         >>> print(response)
@@ -314,7 +314,7 @@ class BadAPI:
         dict: A dictionary containing the chapter number, verse text, chapter introduction, and the specified shalok text.
 
         Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> verse_data = api.bhagwatgita(1, 5)
         >>> print(verse_data)
         """
@@ -349,7 +349,7 @@ class BadAPI:
             actors, trailer link, and more.
 
         Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> movie_data = api.imdb("The Godfather")
         >>> print(movie_data)
         """
@@ -414,7 +414,7 @@ class BadAPI:
                         "movie_genre": movie_genre,
                         "movie_actors": movie_actors,
                         "movie_trailer": movie_trailer,
-                        "join": "@Mr_Sukkun",
+                        "join": "@WORLD_ALPHA",
                         "success": True,
                     })
                     return {"results": output}
@@ -433,7 +433,7 @@ class BadAPI:
         str: The Morse code representation of the input string along with additional information. 🔠
 
     Example usage:
-    >>> from BadAPI import api
+    >>> from PurviAPI import api
     >>> encoded_result = api.morse_encode("Hello World")
     >>> print(encoded_result)
     """
@@ -447,7 +447,7 @@ class BadAPI:
         output = {
             "input": args,
             "results": cipher,
-            "join": "@Mr_Sukkun",
+            "join": "PurviAPI",
             "sucess": True
         }
         return (output)
@@ -464,7 +464,7 @@ class BadAPI:
         str: The decoded text from the Morse code.
 
     Example usage:
-    >>> from BadAPI import api
+    >>> from PurviAPI import api
     >>> decoded_result =api.morse_decode(".... . .-.. .-.. --- / .-- --- .-. .-.. -..")
     >>> print(decoded_result)
     """
@@ -486,7 +486,7 @@ class BadAPI:
         output = {
             "input": args,
             "results": decipher,
-            "join": "@Mr_Sukkun",
+            "join": "@WORLD_ALPHA",
             "success": True
         }
         return output
@@ -504,7 +504,7 @@ class BadAPI:
         list: List of image URLs related to the query.
         
     Example usage:
-    >>> from BadAPI import api
+    >>> from PurviAPI import api
     >>> response = api.unsplash("boy image")
     >>> print(response)
     
@@ -523,7 +523,7 @@ class BadAPI:
             image_tags = soup.find_all('img')
             image_urls = [img['src'] for img in image_tags if img['src'].startswith('https://media.istockphoto.com')]
             
-            return {"results": image_urls, "join": "@Mr_Sukkun", "success": True}
+            return {"results": image_urls, "join": "@WORLD_ALPHA", "success": True}
         else:
             return {f"status code: {response.status_code}"}
       
@@ -539,7 +539,7 @@ class BadAPI:
         dict: A dictionary containing user data such as streak, total active days, badges, user profile information, and social media URLs.
 
     Example usage:
-    >>> from BadAPI import api
+    >>> from PurviAPI import api
     >>> user_data = api.leetcode("Bad")
     >>> print(user_data)"""
         url = base64.b64decode('aHR0cHM6Ly9sZWV0Y29kZS5jb20vZ3JhcGhxbC8=').decode("utf-8")
@@ -645,7 +645,7 @@ class BadAPI:
         dict: A dictionary containing information about the specified package, such as name, version, description, author, license, and more.
 
     Example usage:
-    >>> from BadAPI import api
+    >>> from PurviAPI import api
     >>> package_info = api.pypi("requests")
     >>> print(package_info)
     """
@@ -667,8 +667,8 @@ class BadAPI:
         dict: A dictionary containing search results of GitHub repositories. Each entry includes an index and corresponding repository.
 
     Example usage:
-    >>> from BadAPI import api
-    >>> search_results = api.repo("BadRobot")
+    >>> from PurviAPI import api
+    >>> search_results = api.repo("Sonali_ProBot")
     >>> print(search_results)
     """
         
@@ -680,7 +680,7 @@ class BadAPI:
         for index, item in enumerate(items, 1):
             result.append((index, item))
 
-        return {"results": result, "join": "@Mr_Sukkun", "sucess": True}
+        return {"results": result, "join": "@WORLD_ALPHA", "sucess": True}
     
     @staticmethod
     def github(args):
@@ -694,8 +694,8 @@ class BadAPI:
         dict: A dictionary containing search results of GitHub username .
 
     Example usage:
-    >>> from BadAPI import api
-    >>> search_results = api.github("Bad")
+    >>> from PurviAPI import api
+    >>> search_results = api.github("RAUSHAN")
     >>> print(search_results)
     """
 
@@ -743,7 +743,7 @@ class BadAPI:
         dict: A dictionary containing search results of meme
         
         Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> search_results = api.meme()
         >>> print(search_results)
         """
@@ -767,7 +767,7 @@ class BadAPI:
             dict: JSON response containing weather data for the specified city.
 
         Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> weather_data = api.weather("Bihar")
         >>> print(weather_data)
         """
@@ -787,7 +787,7 @@ class BadAPI:
         str: The URL of the uploaded image.
         
     Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> upload_image = api.upload_image(image_url="url-of-img.jpg")
         >>> print(upload_image)
     """
@@ -827,7 +827,7 @@ class BadAPI:
             bytes: The generated image in bytes format.
             
         Example usage:
-        >>> from BadAPI import api
+        >>> from PurviAPI import api
         >>> generated_image= api.ai_image("boy image")
         >>> print(generated_image)
         """
@@ -854,5 +854,5 @@ class BadAPI:
 
         
             
-api=BadAPI()
+api=PurviAPI()
 
