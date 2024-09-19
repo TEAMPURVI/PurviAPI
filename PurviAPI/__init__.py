@@ -17,7 +17,7 @@ __version__ = "0.6.5.6"
 __all__ = ["api"]
 
 
-class BadAPI:
+class PurviAPI:
     
     def __init__(self)->None:
         """Api for various purpose
