@@ -1,4 +1,4 @@
-# BadAPI 🚀
+# PurviAPI 🚀
 
 ## Installation
 
@@ -6,12 +6,12 @@
 pip install BadAPI
 ```
 
-Please note that you need to install `BadAPI` using pip by running `pip install --upgrade BadAPI` in your terminal before executing these codes.
+Please note that you need to install `PurviAPI` using pip by running `pip install --upgrade PurviAPI` in your terminal before executing these codes.
 
 ## AI Image Generator
 
 ```
-from BadAPI import api
+from PurviAPI import api
 generated_image= api.ai_image("boy image")
 print(generated_image)
 ```
@@ -19,7 +19,7 @@ print(generated_image)
 ## Chatgpt AI 🤖
 
 ```
-from BadAPI import api
+from PurviAPI import api
 
 # Execute Chatgpt AI with the input text
 
@@ -40,7 +40,7 @@ print(response)
 ## Chatbot AI 🤖
 
 ```
-from BadAPI import api
+from PurviAPI import api
 
 # Execute Chatbot AI with the input text
 
@@ -50,7 +50,7 @@ print(api.chatbot("hii"))
 ## Blackbox AI 🤖
 
 ```
-from BadAPI import api
+from PurviAPI import api
 
 # Execute blackbox AI with the input text
 
@@ -60,7 +60,7 @@ print(api.blackbox("write flask app code"))
 ## Password Generator 💡
 
 ```
-from BadAPI import api
+from PurviAPI import api
 
 # Generate a default length password
 print(api.password())
@@ -72,7 +72,7 @@ print(api.password(10))
 ## Gemini AI 🤖
 
 ```
-from BadAPI import api
+from PurviAPI import api
 
 # Execute Gemini AI with the input text
 
@@ -82,7 +82,7 @@ print(api.gemini("write flask app code"))
 ## Datagpt AI 🤖
 
 ```
-from BadAPI import api
+from PurviAPI import api
 
 # Execute datagpt AI with the input text
 response = api.datagpt("what is data science")
@@ -92,7 +92,7 @@ print(response)
 ## BhagwatGita
 
 ```
-from BadAPI import api
+from PurviAPI import api
 verse_data = api.bhagwatgita(1, 5)
 print(verse_data)
 ```
@@ -100,7 +100,7 @@ print(verse_data)
 ## IMDB Search
 
 ```
-from BadAPI import api
+from PurviAPI import api
 
 
 movie_data = api.imdb("The Godfather")
@@ -111,7 +111,7 @@ print(movie_data)
 ## Morse Decode
 
 ```
-from BadAPI import api
+from PurviAPI import api
 
 decoded_result =api.morse_decode(".... . .-.. .-.. --- / .-- --- .-. .-.. -..")
 
@@ -121,7 +121,7 @@ print(decoded_result)
 ## Morse Encode
 
 ```
-from BadAPI import api
+from PurviAPI import api
 encoded_result =api.morse_encode("enter text here")
 print(encoded_result)
 ```
@@ -129,7 +129,7 @@ print(encoded_result)
 ## Hastag Generator
 
 ```
-from BadAPI import api
+from PurviAPI import api
 keyword = "python"
 hashtags = api.hashtag(keyword)
 print(hashtags)
@@ -138,7 +138,7 @@ print(hashtags)
 ## Unsplash Image Search
 
 ```
-from BadAPI import api
+from PurviAPI import api
 response = api.unsplash("boy image")
 print(response)
 
@@ -147,7 +147,7 @@ print(response)
 ## LeetCode Information
 
 ```
-from BadAPI import api
+from PurviAPI import api
 
 user_data = api.leetcode("Bad")
 print(user_data)
@@ -156,7 +156,7 @@ print(user_data)
 ## Pypi Info
 
 ```
-from BadAPI import api
+from PurviAPI import api
 user_data = api.pypi("Badapi")
 print(user_data)
 ```
@@ -164,7 +164,7 @@ print(user_data)
 ## Github Profile Information
 
 ```
-from BadAPI import api
+from PurviAPI import api
 search_results = api.github("Bad")
 print(search_results)
 ```
@@ -172,7 +172,7 @@ print(search_results)
 ## Github Repo Search
 
 ```
-from BadAPI import api
+from PurviAPI import api
 search_results = api.repo("Badrobot")
 print(search_results)
 ```
@@ -180,7 +180,7 @@ print(search_results)
 ## Random Meme
 
 ```
-from BadAPI import api
+from PurviAPI import api
 search_results = api.meme()
 print(search_results)
 ```
@@ -191,7 +191,7 @@ print(search_results)
 
 ## Copyright (c) 2024-25
 
-## Author : Bad 👨‍💻
+## Author : RAUSHAN 👨‍💻
 
 # Functions in the api module are as follows:
 
@@ -216,5 +216,5 @@ print(search_results)
 19. <b> ai_image(args)</b> - Generate image using AI
 20. <b> upload_image(image_url,image_file) </b> - upload image from img url or img file.
 
-<b>🔗 Have fun coding with BadAPI! </b>
+<b>🔗 Have fun coding with PurviAPI! </b>
 
